@@ -1,0 +1,81 @@
+/* styles.css */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.cell.x::before {
+  content: 'X';
+  color: red;
+}
+
+.cell.o::before {
+  content: 'O';
+  color: black;
+}
+
+.cell:hover {
+  background-color: #f0f0f0;
+}
+
+.message {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
